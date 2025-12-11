@@ -12,6 +12,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ServiceComponent } from './components/services/service/service.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     LandingPageComponent,
     AboutComponent,
     PortfolioComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,

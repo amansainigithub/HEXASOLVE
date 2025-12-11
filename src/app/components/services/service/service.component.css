@@ -1,0 +1,881 @@
+/* Responsive Banner CSS */
+:root{
+  --accent: #0d6efd;
+  --dark: rgba(10,13,20,0.85);
+  --muted: #6c757d;
+  --glass: rgba(255,255,255,0.08);
+  --max-width: 1240px;
+  --radius: 14px;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.services-banner {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 16px;
+  position: relative;
+  color: #fff;
+  background-image: url("../../../../assets/bannerimages/banner2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 16px 16px;
+}
+
+.services-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  border-radius: 0 0 16px 16px;
+}
+
+.banner-container {
+  max-width: var(--max-width);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 0 10px;
+}
+
+/* Left Text Area */
+.banner-left {
+  flex: 1 1 550px;
+  min-width: 280px;
+}
+
+.banner-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.banner-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.banner-sub {
+  font-size: 1.04rem;
+  line-height: 1.5;
+  color: #e8eef9;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Right Side Card */
+.banner-card {
+  flex: 0 0 390px;
+  min-width: 280px;
+  padding: 20px;
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.banner-card h3 {
+  margin-bottom: 10px;
+}
+
+.banner-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.banner-card li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.banner-price {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+
+@media (max-width: 992px) {
+  .banner-card {
+    width: 100%;
+    order: 2;
+  }
+  .banner-left {
+    order: 1;
+  }
+  .services-banner {
+    min-height: 58vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  .banner-sub {
+    font-size: 0.95rem;
+  }
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* ########################################################## */
+/* SERVICE FIRST STARTING*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.gallery-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect: 2 & 4 upar */
+.item-2,
+.item-4 {
+  transform: translateY(-30px);   /* 👈 yahi se upar jayegi */
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .gallery-item {
+    height: 140px;
+  }
+
+  /* Mobile me stagger thoda halka */
+  .item-2,
+  .item-4 {
+    transform: translateY(-10px);
+  }
+}
+/* SERVICE FIRST ENDING */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* E-COMMERCE GALLERY START */
+.ecom-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.ecom-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.ecom-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect: item-2 & item-4 go up */
+.item-2,
+.item-4 {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .ecom-item {
+    height: 140px;
+  }
+
+  /* Mobile stagger lighter */
+  .item-2,
+  .item-4 {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.ecom-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ecom-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.ecom-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.ecom-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.ecom-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.ecom-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* E-COMMERCE GALLERY END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* BACKEND GALLERY START */
+.backend-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.backend-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.backend-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect: item-b & item-d go up */
+.item-b,
+.item-d {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .backend-item {
+    height: 140px;
+  }
+
+  /* Mobile stagger lighter */
+  .item-b,
+  .item-d {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.backend-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.backend-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.backend-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.backend-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.backend-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.backend-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* BACKEND GALLERY END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* SMALL BUSINESS GALLERY START */
+.smallbiz-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.smallbiz-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.smallbiz-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect: item-2 & item-4 go up */
+.item-2,
+.item-4 {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .smallbiz-item {
+    height: 140px;
+  }
+
+  /* Mobile stagger lighter */
+  .item-2,
+  .item-4 {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.smallbiz-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.smallbiz-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.smallbiz-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.smallbiz-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.smallbiz-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.smallbiz-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* SMALL BUSINESS GALLERY END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* CRM / ADMIN PANEL GALLERY START */
+.crm-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.crm-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.crm-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect: item-2 & item-4 go up */
+.item-2,
+.item-4 {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .crm-item {
+    height: 140px;
+  }
+
+  /* Mobile stagger lighter */
+  .item-2,
+  .item-4 {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.crm-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.crm-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.crm-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.crm-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.crm-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.crm-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* CRM / ADMIN PANEL GALLERY END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* SEO & SPEED OPTIMIZATION GALLERY START */
+.seoopt-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.seoopt-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.seoopt-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect for modern layout */
+.item-x2,
+.item-x4 {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .seoopt-item { height: 140px; }
+
+  .item-x2,
+  .item-x4 {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.seoopt-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.seoopt-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.seoopt-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.seoopt-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.seoopt-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: 0.3s ease;
+}
+
+.seoopt-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* SEO & SPEED OPTIMIZATION GALLERY END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################################################## */
+/* WEBSITE MAINTENANCE GALLERY */
+.maint-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.maint-item {
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.maint-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stagger effect */
+.mitem-x2,
+.mitem-x4 {
+  transform: translateY(-30px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .maint-item { height: 140px; }
+
+  .mitem-x2,
+  .mitem-x4 {
+    transform: translateY(-10px);
+  }
+}
+
+/* CONTENT STYLING */
+.maint-tag {
+  font-weight: 500;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.maint-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.maint-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.maint-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.maint-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: 0.3s ease;
+}
+
+.maint-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* END */
+/* ########################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
