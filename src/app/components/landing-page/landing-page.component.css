@@ -192,22 +192,37 @@
 
 .card1{
   background-color: #FFF3E2;
+  border-radius: 12px;
 }
 
 .card2{
   background-color: #DEEDFD;
+  border-radius: 12px;
 }
 
 .card3{
   background-color: #E8E4F7;
+  border-radius: 12px;
 }
 
 .card4{
   background-color: #FFF7A6;
+  border-radius: 12px;
 }
 
 .ceo{
   object-fit: cover;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    background: #e8f4ff;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+    transform: translateY(-4px);
+    cursor: pointer;
 }
 
 
@@ -687,3 +702,29 @@
   background-color: #007bff;
   margin: 10px 0 20px;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+.service-bg {
+  background-image: url("../../../assets/landing Page/ATHLETES-SUPPORTING-PARTICIPANTS-TO-BUILD-AN-INCLUSIVE-AUSTRALIA-@2x.png");
+  background-size: cover;       /* Image full card me fit ho jayegi */
+  background-position: center;  /* Center perfect */
+  background-repeat: no-repeat; /* Repeat nahi hoga */
+  border-radius: 12px;
+  min-height: 130px;            /* Card height maintain */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;    /* Text image ke upar bottom side */
+  color: #fff;                  /* Text visible */
+  padding: 20px;
+  position: relative;
+}

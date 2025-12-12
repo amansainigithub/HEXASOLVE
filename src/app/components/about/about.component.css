@@ -1,0 +1,11 @@
+.card-border-radius {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card-border-radius:hover {
+    background: #e8f4ff; /* light blue */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+    transform: translateY(-4px);
+    cursor: pointer;
+}

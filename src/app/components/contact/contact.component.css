@@ -1,0 +1,82 @@
+
+
+/*--------------------------------------------------------------
+# Form and Address Section 
+--------------------------------------------------------------*/
+.contact-section {
+      padding: 60px 0;
+    }
+
+    .contact-heading h2 {
+      font-weight: 700;
+      color: #012970;
+    }
+
+    .contact-heading p {
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .info-box {
+      background: #007bff;
+      color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      height: 100%;
+    }
+
+    .info-box h4 {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .info-box p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #339aff;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 18px;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-control,
+    .form-control:focus {
+      border-radius: 8px;
+      box-shadow: none;
+      border-color: #ccc;
+    }
+
+    .btn-primary {
+      background: #007bff;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 30px;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #0069d9;
+    }
+
